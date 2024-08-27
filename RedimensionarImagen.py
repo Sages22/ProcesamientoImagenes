@@ -4,7 +4,7 @@ import cv2
 imagen = cv2.imread( 'C:\\Users\\santi\\OneDrive\\Documentos\\Formacion\\Tesis\\Imagenes_no_Procesadas\\Patologias_Estructurales\\19_comAl.jpeg')
 
 # Definir las nuevas dimensiones
-nueva_ancho = 800
+nueva_ancho = 1000
 nueva_alto = 600
 
 # Redimensionar la imagen

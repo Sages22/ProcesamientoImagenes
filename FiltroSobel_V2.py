@@ -32,7 +32,7 @@ for nombre_archivo in os.listdir(carpeta_origen):
         #Se hace el calculo de las magnitudes usando ambos ejes
         sobel_magnitud = cv2.magnitude(sobel_x, sobel_y)
 
-        #Dilatacion de la imagen
+        #Dilatacion de la imagen para mostrar las grietas mas pequeñas
         kernel = np.ones((3, 3), np.uint8)
         imagen_dilatada = cv2.dilate(sobel_magnitud, kernel, iterations=1)
 
@@ -40,6 +40,6 @@ for nombre_archivo in os.listdir(carpeta_origen):
         ruta_destino = os.path.join(carpeta_destino, 'sobel_' + nombre_archivo)
         cv2.imwrite(ruta_destino, imagen_dilatada)
 
-        print(f'Imagen procesada y guardada: {ruta_destino}')
+        print(f'Imagen procesada y guardada correctamente: {ruta_destino}')
 
 print("Proceso completado.")
